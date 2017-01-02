@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>lowpolyify</title>
+    <link rel="stylesheet" href="./core.css">
+</head>
+<body>
+    <div id="mask">
+        <div id="display-wrap">
+            <img id="display">
+            <img src="./close.png" id="close" width="50" height="50">        
+        </div>
+    </div>
+    <h2 class="title">Lowpolyify</h2>
+    <div id="main">
+        <div id="input-box">
+            <div id="input">
+                <img class="img">
+                <div class="scale-up"><img src="./scale.png" width="50" height="50"></div>
+            </div>
+            <button class="btn">input<input type="file" style="display:none" id="fileEle"></button>
+        </div>
+        <div id="result-box">
+            <div id="result">
+                <img class="img">
+                <div class="scale-up"><img src="./scale.png" width="50" height="50"></div>
+            </div>
+            <button class="btn">convert</button>
+        </div>
+        <div id="config">
+            <div class="input-group">
+                <label>灰度阈值：</label><input type="text" class="input" value="40">
+            </div>
+            <div class="input-group">
+               <label>总点数：</label><input type="text" class="input" value="1000"> 
+            </div>
+            <div class="input-group">
+                <label>边缘点比例：</label><input type="text" class="input" value="60"><span>%</span>
+            </div>
+        </div>
+        <div id="copyright">
+            By Wyatt Hou
+        </div>
+    </div>
+    <script type="text/javascript" src="./sobel.js"></script>
+    <script type="text/javascript" src="./delaunay.js"></script>
+    <script type="text/javascript" src="./core.js"></script>
+</body>
+</html>

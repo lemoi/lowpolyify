@@ -1,0 +1,175 @@
+* {
+    font-family: "微软雅黑";
+    box-sizing: border-box;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+#main {
+    margin: auto;
+    width: 980px;
+    text-align: center;
+}
+#main:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.title {
+    text-align: center;
+    min-width: 980px;
+}
+
+#input-box, #result-box {
+    border: 1px solid #9c27b0;
+    display: inline-block;
+    margin: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 30px #9c27b0;
+}
+
+#input, #result {
+    width: 350px;
+    height: 300px;
+    border: 1px solid #66ccff;
+    padding: 10px;
+    position: relative;
+}
+.img {
+    max-width: 330px;
+    outline-width: 0;
+    border-width: 0;
+}
+
+.btn {
+    display: inline-block;
+    *display: inline;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    *margin-left: .3em;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    *background-color: #e6e6e6;
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #cccccc;
+    *border: 0;
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    *zoom: 1;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.btn:hover,
+.btn:focus {
+    color: #333333;
+    text-decoration: none;
+    background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
+     -moz-transition: background-position 0.1s linear;
+       -o-transition: background-position 0.1s linear;
+          transition: background-position 0.1s linear;
+}
+
+.btn {
+    background: #66ccff;
+    margin: 10px;
+    width: 80px;  
+}
+
+.input {
+    width: 50px;
+    text-align: center;
+}
+
+.input-group {
+    margin: 20px;
+    display: inline-block;
+}
+
+#mask {
+    background-color: rgba(158, 158, 158, 0.7);
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    display: none;
+    text-align: center;
+    z-index: -1;
+}
+
+#display {
+    max-width: 980px;
+}
+
+#display-wrap {
+    width: 980px;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.scale-up {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(156, 39, 176, 0.2);
+}
+.scale-up:hover {
+    transition: 1s;
+    opacity: 0.3;
+}
+.scale-up img {
+    position: relative;
+    top: 125px;
+}
+#mask.show{
+    display: block;
+    z-index: 100;
+}
+
+#close {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#close:hover {
+    opacity: 0.5;
+}
+
+#close:focus {
+    opacity: 0.3;
+}
+
+#copyright {
+    font-size: 13px;
+    text-align: right;
+    padding-right: 20px;
+}
